@@ -1,0 +1,27 @@
+---
+import Intro from "components/Intro.astro";
+import Menu from "components/Menu.astro";
+import Meta from "components/Meta.astro";
+import PageLayout from "layouts/PageLayout.astro";
+---
+
+<PageLayout>
+  <Meta
+    title="Menu"
+    description="Indulge in the delicious homemade meals prepared in our in-house kitchen at Solitude in the Himalayas. Our menu features a diverse range of food options, including local cuisine, allowing you to experience the authentic flavors of the region."
+    slot="meta"
+  />
+  <Fragment slot="main">
+    <Intro
+      title="Menu"
+      subtitle="A La Carte | Solitude in Himalayas, Darjeeling"
+    >
+      Indulge in the delicious homemade meals prepared in our in-house kitchen
+      at Solitude in the Himalayas. Our menu features a diverse range of food
+      options, including local cuisine, allowing you to experience the authentic
+      flavors of the region. With an extensive selection of dishes, our kitchen
+      is sure to cater to all your food preferences.
+    </Intro>
+    <Menu />
+  </Fragment>
+</PageLayout>

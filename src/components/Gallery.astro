@@ -1,0 +1,10 @@
+---
+import { siteData } from "site.config";
+import Link from "components/Link.astro";
+const { galleryLink } = siteData;
+---
+
+<li>
+  <strong>Gallery.</strong> Discover more about the location, nearby area, and views
+  by visiting our <Link href={galleryLink} newTab>gallery</Link>.
+</li>

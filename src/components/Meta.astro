@@ -1,0 +1,36 @@
+---
+import { siteData } from "site.config";
+const { author, ogImage, siteTitle } = siteData;
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+const fullTitle =
+  Astro.url.pathname === "/" ? siteTitle : `${title} | ${siteTitle}`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImageURL = new URL(ogImage, Astro.url).href;
+---
+
+<title>{fullTitle}</title>
+<meta name="title" content={fullTitle} />
+<meta name="description" content={description} />
+<meta name="author" content={author} />
+<link rel="canonical" href={canonicalURL} />
+<link rel="sitemap" href="/sitemap-index.xml" />
+
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:type" content="website" />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:image" content={socialImageURL} />
+<meta property="og:image:alt" content="Solitude in Himalayas Logo" />
+<meta property="og:description" content={description} />
+<meta property="og:site_name" content={siteTitle} />
+<meta property="og:locale" content="en_IN" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content={canonicalURL} />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={socialImageURL} />
+<meta name="twitter:image:alt" content="Solitude in Himalayas Logo" />

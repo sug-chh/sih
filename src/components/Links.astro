@@ -1,0 +1,41 @@
+---
+import { siteData } from "site.config";
+import LLink from "./LLink.astro";
+
+const {
+  properties,
+  galleryLink,
+  gMapsLink,
+  airbnbLink,
+  bookingContact,
+  emailId,
+  bookingWhatsapp,
+  facebookLink,
+  instagramLink,
+} = siteData;
+---
+
+<section>
+  <div class="flex gap-4 flex-wrap lowercase items-center">
+    <LLink href={"/"} rel="prefetch">#home</LLink>
+    <LLink href={"/faqs"} rel="prefetch">#faqs</LLink>
+    <LLink href={"/menu"} rel="prefetch">#menu</LLink>
+    {
+      properties.map((p) => (
+        <LLink href={p.link} newTab>
+          #{p.name}
+        </LLink>
+      ))
+    }
+    <LLink href={galleryLink} newTab>#gallery</LLink>
+    <LLink href={gMapsLink} newTab>#location</LLink>
+    <LLink href={airbnbLink} newTab>#airbnb</LLink>
+    <LLink href={airbnbLink} newTab>#airbnb reviews</LLink>
+    <LLink href={gMapsLink} newTab>#gmaps reviews</LLink>
+    <LLink href={bookingContact}>#call</LLink>
+    <LLink href={emailId}>#mail</LLink>
+    <LLink href={bookingWhatsapp} newTab>#whatsapp</LLink>
+    <LLink href={facebookLink} newTab>#facebook</LLink>
+    <LLink href={instagramLink} newTab>#instagram</LLink>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+---
+import Intro from "components/Intro.astro";
+import Info from "components/Info.astro";
+import PageLayout from "layouts/PageLayout.astro";
+import Meta from "components/Meta.astro";
+---
+
+<PageLayout>
+  <Meta
+    title="Home"
+    description="Where mountains meet hospitality: welcome to our homestay with breathtaking views. At Solitude in Himalayas, we offer a peaceful and quiet atmosphere surrounded by organic farms and lush greenery."
+    slot="meta"
+  />
+  <Fragment slot="main">
+    <Intro
+      title="Solitude in Himalayas"
+      subtitle="Tumsong Khasmahal Busty, Darjeeling"
+    >
+      At Solitude in Himalayas, we offer a peaceful and quiet atmosphere
+      surrounded by organic farms and lush greenery. Our goal is to provide our
+      guests with an unforgettable experience of reconnecting with nature and
+      rejuvenating their bodies and minds. Come and explore the beauty of the
+      Himalayas with us!
+    </Intro>
+    <Info />
+  </Fragment>
+</PageLayout>

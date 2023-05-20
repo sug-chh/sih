@@ -1,0 +1,12 @@
+---
+import { siteData } from "site.config";
+const { gMapsLink, airbnbLink } = siteData;
+import Link from "components/Link.astro";
+---
+
+<li>
+  <strong>Reviews.</strong> Discover what our guests have to say about their experience
+  by reading our reviews on both <Link href={gMapsLink} newTab>Google</Link> maps
+  and
+  <Link href={airbnbLink} newTab>Airbnb.</Link>
+</li>

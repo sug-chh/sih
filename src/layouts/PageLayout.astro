@@ -1,0 +1,47 @@
+---
+import "globals.css";
+import GoogleFont from "./GoogleFont.astro";
+import ThemeScript from "./ThemeScript.astro";
+import Favicon from "./Favicon.astro";
+import Header from "components/Header.astro";
+import FontAwesome from "./FontAwesome.astro";
+import Footer from "components/Footer.astro";
+import GoogleAnalytics from "./GoogleAnalytics.astro";
+import GoogleSiteVerification from "./GoogleSiteVerification.astro";
+---
+
+<html class="theme-sleek" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <Favicon />
+    <slot name="meta" />
+    <GoogleSiteVerification />
+    <GoogleAnalytics />
+    <GoogleFont />
+    <ThemeScript />
+    <FontAwesome />
+  </head>
+  <body class="min-h-screen max-w-3xl mx-auto px-6 sm:px-8">
+    <Header />
+    <main id="main">
+      <slot name="main" />
+    </main>
+    <Footer />
+    <style>
+      body {
+        display: grid;
+        grid-template-areas:
+          "header"
+          "main"
+          "footer";
+        grid-template-rows: 5rem minmax(0, 1fr) 5rem;
+        grid-template-columns: minmax(0, 1fr);
+      }
+      main {
+        grid-area: main;
+      }
+    </style>
+  </body>
+</html>

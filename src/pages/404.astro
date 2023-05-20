@@ -1,0 +1,25 @@
+---
+import Intro from "components/Intro.astro";
+import Links from "components/Links.astro";
+import Meta from "components/Meta.astro";
+import PageLayout from "layouts/PageLayout.astro";
+---
+
+<PageLayout>
+  <Meta
+    title="404"
+    description="The page you're looking for doesn't seem to exist! If you're interested in learning more about Solitude in the Himalayas - Darjeeling, take a look at these informative links we've compiled."
+    slot="meta"
+  />
+  <Fragment slot="main">
+    <Intro
+      title="404"
+      subtitle="Page Not Found | Solitude in Himalayas, Darjeeling"
+    >
+      The page you're looking for doesn't seem to exist! If you're interested in
+      learning more about Solitude in the Himalayas - Darjeeling, take a look at
+      these informative links we've compiled.
+    </Intro>
+    <Links />
+  </Fragment>
+</PageLayout>

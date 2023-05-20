@@ -1,0 +1,19 @@
+---
+import Amenity from "./Amenity.astro";
+import { siteData } from "site.config";
+const {amenities} = siteData
+---
+
+<li>
+    <strong>Amenities.</strong>
+    <p class="lowercase inline">
+      {
+        amenities.map((amenity, index) => {
+          if (index === amenities.length - 1) {
+            return <Amenity>{amenity}.</Amenity>;
+          }
+          return <Amenity>{amenity},</Amenity>;
+        })
+      }
+    </p>
+  </li>

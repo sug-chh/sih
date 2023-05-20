@@ -1,0 +1,73 @@
+---
+import { siteData } from "site.config";
+import Link from "./Link.astro";
+const { bookingWhatsapp, gMapsLink, airbnbLink, emailId, githubLink } = siteData;
+---
+
+<footer class="text-xs pt-28">
+  <div class="pb-2">
+    <div class="flex justify-center space-x-10 mb-4">
+      <Link
+        class="unset text-xl ml-4 hover:text-text-link"
+        href={bookingWhatsapp}
+        newTab
+      >
+        <i
+          class="fa-brands fa-whatsapp"
+          aria-hidden="true"
+          title="Solitude in Himalayas on Whatsapp"></i>
+        <span class="fa-sr-only">Solitude in Himalayas on Whatsapp</span>
+      </Link>
+
+      <Link class="unset text-xl ml-4 hover:text-text-link" href={emailId}>
+        <i
+          class="fa-regular fa-envelope"
+          aria-hidden="true"
+          title="Solitude in Himalayas on Gmail"></i>
+        <span class="fa-sr-only">Solitude in Himalayas on Gmail</span>
+      </Link>
+
+      <Link
+        class="unset text-xl ml-4 hover:text-text-link"
+        href={airbnbLink}
+        newTab
+      >
+        <i
+          class="fa-brands fa-airbnb"
+          aria-hidden="true"
+          title="Solitude in Himalayas on Airbnb"></i>
+        <span class="fa-sr-only">Solitude in Himalayas on Airbnb</span>
+      </Link>
+
+      <Link
+        class="unset text-xl ml-4 hover:text-text-link"
+        href={gMapsLink}
+        newTab
+      >
+        <i
+          class="fa-brands fa-google"
+          aria-hidden="true"
+          title="Solitude in Himalayas on Google maps"></i>
+        <span class="fa-sr-only">Solitude in Himalayas on Google maps</span>
+      </Link>
+    </div>
+
+    <p class="text-gray-500">
+      <Link class="unset" href={githubLink} newTab>Sugam's</Link> custom-coded PWA - optimized for mobile
+      and stunning in dark mode.
+    </p>
+    <p class="text-gray-500">
+      &copy; {new Date().getFullYear()} Solitude in Himalayas. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    grid-area: footer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>

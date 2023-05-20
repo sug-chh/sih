@@ -1,0 +1,31 @@
+---
+import { siteData } from "site.config";
+const { menuItems } = siteData;
+---
+
+<div class="mb-5">
+  {
+    menuItems.map((item) => (
+      <div class="mt-10">
+        <span class="text-xs font-bold uppercase">{item.name}</span>
+        <div
+          role="list"
+          class="mt-2 divide-y border-t border-b divide-gray-500 border-gray-500"
+        >
+          {item.subItems.map((subItem) => (
+            <div role="listitem" class="flex items-center justify-between py-2">
+              <div class="flex min-w-0 flex-1 items-center">
+                <div class="min-w-0 flex-1">
+                  <p class="truncate text-sm">{subItem.name}</p>
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <p class="text-sm">₹{subItem.price}.00</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))
+  }
+</div>

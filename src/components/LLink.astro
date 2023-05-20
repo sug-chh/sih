@@ -1,0 +1,20 @@
+---
+export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
+  newTab?: boolean;
+}
+const { href, newTab = false, ...props } = Astro.props;
+---
+
+<code>
+  {
+    newTab ? (
+      <a href={href} target="_blank" {...props}>
+        <slot />
+      </a>
+    ) : (
+      <a href={href} {...props}>
+        <slot />
+      </a>
+    )
+  }
+</code>

@@ -1,0 +1,21 @@
+{
+  "name": "Solitude in Himalayas",
+  "short_name": "SIH",
+  "description": "Where mountains meet hospitality: welcome to our homestay with breathtaking views. At Solitude in Himalayas, we offer a peaceful and quiet atmosphere surrounded by organic farms and lush greenery.",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "theme_color": "#facc15",
+  "background_color": "#0e141b",
+  "display": "standalone"
+}

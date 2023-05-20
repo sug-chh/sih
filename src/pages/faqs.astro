@@ -1,0 +1,27 @@
+---
+import Faqs from "components/Faqs.astro";
+import Intro from "components/Intro.astro";
+import Links from "components/Links.astro";
+import Meta from "components/Meta.astro";
+import PageLayout from "layouts/PageLayout.astro";
+---
+
+<PageLayout>
+  <Meta
+    title="Faqs"
+    description="If you're interested in learning more about Solitude in the Himalayas - Darjeeling, take a look at these informative links and frequently asked questions we've compiled."
+    slot="meta"
+  />
+  <Fragment slot="main">
+    <Intro
+      title="FAQs"
+      subtitle="Helpful Resources | Solitude in Himalayas, Darjeeling"
+    >
+      If you're interested in learning more about Solitude in the Himalayas -
+      Darjeeling, take a look at these informative links and frequently asked
+      questions we've compiled.
+    </Intro>
+    <Links />
+    <Faqs />
+  </Fragment>
+</PageLayout>

@@ -1,0 +1,18 @@
+---
+import { siteData } from "site.config";
+import Link from "components/Link.astro";
+const { bookingContact, bookingWhatsapp, facebookLink, instagramLink } =
+  siteData;
+---
+
+<li>
+  <strong>Contact.</strong> Booking your stay at Solitude in Himalayas has never
+  been easier - reach out to us via <Link href={bookingContact}>phone</Link> call,
+  <Link href={bookingWhatsapp} newTab>WhatsApp</Link>, or through our chat
+  services on <Link href={facebookLink} newTab>Facebook</Link> or <Link
+    href={instagramLink}
+    newTab
+  >
+    Instagram
+  </Link> to secure your stay.
+</li>

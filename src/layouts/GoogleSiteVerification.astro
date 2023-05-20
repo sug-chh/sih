@@ -1,0 +1,10 @@
+---
+import { siteData } from "site.config";
+const { googleSiteVerification } = siteData;
+---
+
+{
+  googleSiteVerification && (
+    <meta name="google-site-verification" content={googleSiteVerification} />
+  )
+}
