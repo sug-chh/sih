@@ -35,7 +35,7 @@ interface SiteData {
 export const siteData: SiteData = {
   url: "https://sih-darjeeling.netlify.app",
   siteTitle: "Solitude In Himalayas",
-  author: "Sugam Chhetri",
+  author: "Sugam",
   ogImage: "/og.png",
   galleryLink: "https://photos.app.goo.gl/94KsTv3gK5LWmmt27",
   gMapsLink: "https://g.page/solitude-in-himalayas",

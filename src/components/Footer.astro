@@ -1,7 +1,7 @@
 ---
 import { siteData } from "site.config";
 import Link from "./Link.astro";
-const { bookingWhatsapp, gMapsLink, airbnbLink, emailId, githubLink } = siteData;
+const { bookingWhatsapp, gMapsLink, airbnbLink, emailId, githubLink, author } = siteData;
 ---
 
 <footer class="text-xs pt-28">
@@ -53,7 +53,7 @@ const { bookingWhatsapp, gMapsLink, airbnbLink, emailId, githubLink } = siteData
     </div>
 
     <p class="text-gray-500">
-      <Link class="unset" href={githubLink} newTab>Sugam's</Link> custom-coded PWA - optimized for mobile
+      <Link class="unset" href={githubLink} newTab>{author}'s</Link> custom-coded PWA - optimized for mobile
       and stunning in dark mode.
     </p>
     <p class="text-gray-500">

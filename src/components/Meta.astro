@@ -1,6 +1,6 @@
 ---
 import { siteData } from "site.config";
-const { author, ogImage, siteTitle } = siteData;
+const { ogImage, siteTitle } = siteData;
 interface Props {
   title: string;
   description: string;
@@ -15,7 +15,6 @@ const socialImageURL = new URL(ogImage, Astro.url).href;
 <title>{fullTitle}</title>
 <meta name="title" content={fullTitle} />
 <meta name="description" content={description} />
-<meta name="author" content={author} />
 <link rel="canonical" href={canonicalURL} />
 <link rel="sitemap" href="/sitemap-index.xml" />
 
